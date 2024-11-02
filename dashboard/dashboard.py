@@ -17,7 +17,7 @@ page = st.sidebar.selectbox("Pilih Halaman", ["Tentang Dataset", "Data Wrangling
 # Fungsi untuk memuat data
 @st.cache_data
 def load_data():
-    data = pd.read_csv('../data/PRSA_Data_Shunyi_20130301-20170228.csv')
+    data = pd.read_csv('./data/PRSA_Data_Shunyi_20130301-20170228.csv')
     # Menggabungkan kolom waktu
     data['datetime'] = pd.to_datetime(data[['year', 'month', 'day', 'hour']])
 
